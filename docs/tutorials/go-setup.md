@@ -13,7 +13,7 @@ The tutorial will follow three main sections:
 2. Setting up a development container for Go.
 3. Writing a simple hello world program.
 
-**Parts One and Two of this tutorial are adapted from Kris Jordan's [Starting a Static Website Project with MkDocs](https://comp423-25s.github.io/resources/MkDocs/tutorial/) tutorial, with modifications to support Go development.** 
+>Parts One and Two of this tutorial are adapted from Kris Jordan's [Starting a Static Website Project with MkDocs](https://comp423-25s.github.io/resources/MkDocs/tutorial/) tutorial, with modifications to support Go development.
 
 ## Prerequisites
 
