@@ -1,8 +1,8 @@
 # Setting up a dev container for Go
 
-* Primary author: Lucille Moore (https://github.com/lmoore36)
+* Primary author: [Lucille Moore](https://github.com/lmoore36)
 
-* Reviewer: [Falisha Khokhar] (https://github.com/falishakhokhar)
+* Reviewer: [Falisha Khokhar](https://github.com/falishakhokhar)
 
 ## Go Tutorial
 This tutorial will cover how to set up a Go Development Container and create a GitHub repository. We will demonstrate these tasks with a simple "Hello World!" program example.
@@ -13,6 +13,9 @@ The tutorial will follow three main sections:
 2. Setting up a development container for Go.
 3. Writing a simple hello world program.
 
+!!! note
+    Parts One and Two of this tutorial are adapted from Kris Jordan's [Starting a Static Website Project with MkDocs](https://comp423-25s.github.io/resources/MkDocs/tutorial/) tutorial, with modifications to support Go development. 
+
 ## Prerequisites
 
 - [Visual Studio Code](https://code.visualstudio.com/)
@@ -22,7 +25,7 @@ The tutorial will follow three main sections:
 
 ## Part 1: Creating a Local Directory and Initializing Git
 
-1. Open VS Code, and open the terminal. Make sure you're at the root of whereever you want the project to be housed.
+1. Open VS Code, and open the terminal. Make sure you're at the root of wherever you want the project to be housed.
 2. Create a new directory for your project using the terminal command ```mkdir go-tutorial ``` then enter the new directory with ``` cd go-tutorial ```.
 3. Once you're inside the project directory, initialize an empty git repository with ```git init```. This will create a place to store version control data on your local machine.
 4. Create a README file to start your project documentation. ``` echo "# Go Starter Project" > README.md  ```
@@ -44,7 +47,7 @@ git commit -m "Initial commit with README"
 ```
 {
   "name": "Go Dev Environment",
-  "image": "mcr.microsoft.com/devcontainers/go:0-1.20",
+  "image": "mcr.microsoft.com/devcontainers/go:latest",
   "customizations": {
     "vscode": {
       "extensions": ["golang.go"]
@@ -53,48 +56,44 @@ git commit -m "Initial commit with README"
 }
 ```
 
-Explanation:
+Explanations:
 
-- name: Descriptive name for your dev container.
-- image: Specifies the Go development environment Docker image.
-- customizations: Installs the Go VS Code extension for your container.
-- postCreateCommand: Confirms Go is properly installed in the container.
+- `name`: Descriptive name for your dev container.
+- `image`: Specifies the Go development environment Docker image.
+- `customizations`: Installs the Go VS Code extension for your container.
+
 
 ### Step 2: Reopen the Project in a Dev Container
-Press Ctrl+Shift+P (or Cmd+Shift+P on Mac), type "Dev Containers: Reopen in Container," and select the option.
+Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac), type "Dev Containers: Reopen in Container," and select the option.
 Wait for the container to set up (this may take a few minutes).
 
+!!! warning 
+    Make sure Docker is running before reopening the project in a dev container. With Docker running, the container won't initialize.
+
 ## Part 3: Getting Started with Go
-### Step 1: Install the Go language.
 
-Follow the steps from the Go website to download and install Go. 
-
-[Installation Instructions](https://go.dev/doc/install)
-
-Type ``` go version``` in your command line to verify instalation.
-
-### Step 2: Initialize a Go Mod File
+### Step 1: Initialize a Go Mod File
 ```
-go mod init hello-world
+go mod init hello-comp423
 ```
-### Step 3: Create a hello.go file and paste the following code into it.
+### Step 2: Create a hello.go file and paste the following code into it.
 ```
 package main
 
 import "fmt"
 
 func main() {
-    fmt.Println("Hello, World!")
+    fmt.Println("Hello COMP423")
 }
 ```
 
 This is your Go code. In this code, you:
 
-- Declare a main package (a way to group functions, made up of all files in the main directory).
-- Import the fmt package, this contains functions for formatting text. It's one of the standard library packages that comes with installing Go.
-- Implement a main function to print "Hello, World!" to the console. The main function executes by default when you run the main package.
+- *Declare a main package* (a way to group functions, made up of all files in the main directory).
+- *Import the fmt package*, this contains functions for formatting text. It's one of the standard library packages that comes with installing Go.
+- *Implement a main function* to print "Hello, World!" to the console. The main function executes by default when you run the main package.
 
-### Step 4: Run your code in the command line.
+### Step 3: Run your code in the command line.
 
 ```
 $ go run .
