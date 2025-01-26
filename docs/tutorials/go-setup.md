@@ -9,7 +9,7 @@ This tutorial will cover how to set up a Go Development Container and create a G
 
 The tutorial will follow three main sections:
 
-1. Initializing a local and remote git repository.
+1. Initializing a local git repository.
 2. Setting up a development container for Go.
 3. Writing a simple hello world program.
 
@@ -18,32 +18,28 @@ The tutorial will follow three main sections:
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Docker](https://www.docker.com/)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-- [GitHub Account](https://github.com/)
+<!-- - [GitHub Account](https://github.com/) -->
 
 ## Part 1: Creating a Local Directory and Initializing Git
 
-1. Open your terminal or command prompt.
-2. Create a new directory for your project:
-'''
-mkdir go-tutorial
-cd go-tutorial
-'''
-
-### 2. Initialize Git
-git init
+1. Open VS Code, and open the terminal. Make sure you're at the root of whereever you want the project to be housed.
+2. Create a new directory for your project using the terminal command ```mkdir go-tutorial ``` then enter the new directory with ``` cd go-tutorial ```.
+3. Once you're inside the project directory, initialize an empty git repository with ```git init```. This will create a place to store version control data on your local machine.
+4. Create a README file to start your project documentation. ``` echo "# Go Starter Project" > README.md  ```
+5. Add your changes to the git repo and commit them with an inital commit message.
+```
+git add README.md
+git commit -m "Initial commit with README"
+```
+#### You've now set up the directory and version control for your project!
 
 ## Part 2: Setting Up the Development Environment
 
 ### Step 1: Add Development Container Configuration
 
-1. Open the go-tutorial directory in VS Code (File > Open Folder).
-2. Install the Dev Containers extension in VS Code.
-3. Create a .devcontainer directory and add the devcontainer.json file:
-
-```
-mkdir .devcontainer
-touch .devcontainer/devcontainer.json
-```
+1. Open the **go-tutorial** directory that you just created in VS Code. Either via File > Open Folder or ```cd path-to-directory``` in the terminal.
+2. Install the Dev Containers extension in VS Code. You can do this via the extensions widget in the left hand tool bar.
+3. Inside your go-tutorial directory, create a folder titled **.devcontainer** and create a file titled **devcontainer.json** inside that folder.
 4. Add the following content to devcontainer.json:
 ```
 {
@@ -69,13 +65,13 @@ Press Ctrl+Shift+P (or Cmd+Shift+P on Mac), type "Dev Containers: Reopen in Cont
 Wait for the container to set up (this may take a few minutes).
 
 ## Part 3: Getting Started with Go
-### Step 1: Instal the Go language.
+### Step 1: Install the Go language.
 
 Follow the steps from the Go website to download and install Go. 
 
 [Installation Instructions](https://go.dev/doc/install)
 
-Check ``` go version``` to verify instalation.
+Type ``` go version``` in your command line to verify instalation.
 
 ### Step 2: Initialize a Go Mod File
 ```
@@ -94,10 +90,10 @@ func main() {
 
 This is your Go code. In this code, you:
 
-- Declare a main package (a package is a way to group functions, and it's made up of all the files in the same directory).
-- Import the popular fmt package, which contains functions for formatting text, including printing to the console. This package is one of the standard library packages you got when you installed Go.
-- Implement a main function to print a message to the console. A main function executes by default when you run the main package.
- 
+- Declare a main package (a way to group functions, made up of all files in the main directory).
+- Import the fmt package, this contains functions for formatting text. It's one of the standard library packages that comes with installing Go.
+- Implement a main function to print "Hello, World!" to the console. The main function executes by default when you run the main package.
+
 ### Step 4: Run your code in the command line.
 
 ```
