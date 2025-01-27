@@ -1,6 +1,8 @@
 site_name: COMP423 Course Notes
 theme:
   name: material
+  features:
+    - search.highlight
 
 markdown_extensions:
   - codehilite
@@ -11,3 +13,6 @@ markdown_extensions:
 nav:
   - Tutorials:
       - Go Setup: tutorials/go-setup.md
+
+plugins:
+  - search
