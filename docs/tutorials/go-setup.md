@@ -17,10 +17,10 @@ The tutorial will follow three main sections:
 
 ## Prerequisites
 
+Download the following necessary tools for this project!
 - [Visual Studio Code](https://code.visualstudio.com/)
 - [Docker](https://www.docker.com/)
 - [Git](https://git-scm.com/book/en/v2/Getting-Started-Installing-Git)
-<!-- - [GitHub Account](https://github.com/) -->
 
 ## Part 1: Creating a Local Directory and Initializing Git
 
@@ -39,7 +39,7 @@ git commit -m "Initial commit with README"
 
 ### Step 1: Add Development Container Configuration
 
-1. Open the **go-tutorial** directory that you just created in VS Code. Either via File > Open Folder or ```cd path-to-directory``` in the terminal.
+1. Open the **go-tutorial** directory that you just created in VS Code. Either via File > Open Folder or ```cd path-to-directory``` in the terminal. Ensure your terminal is in the correct directory before proceeding.
 2. Install the Dev Containers extension in VS Code. You can do this via the extensions widget in the left hand tool bar.
 3. Inside your go-tutorial directory, create a folder titled **.devcontainer** and create a file titled **devcontainer.json** inside that folder.
 4. Add the following content to devcontainer.json:
@@ -66,8 +66,7 @@ Explanations:
 Press `Ctrl+Shift+P` (or `Cmd+Shift+P` on Mac), type "Dev Containers: Reopen in Container," and select the option.
 Wait for the container to set up (this may take a few minutes).
 
-!!! warning 
-    Make sure Docker is running before reopening the project in a dev container. With Docker running, the container won't initialize.
+> **WARNING:** Make sure Docker is running before reopening the project in a dev container. Without Docker running, the container won't initialize.
 
 ## Part 3: Getting Started with Go
 
@@ -75,7 +74,8 @@ Wait for the container to set up (this may take a few minutes).
 ```
 go mod init hello-comp423
 ```
-### Step 2: Create a hello.go file and paste the following code into it.
+### Step 2: Create a new **hello.go** file and paste the following code into it.
+
 ```
 package main
 
@@ -96,7 +96,7 @@ This is your Go code. In this code, you:
 
 ```
 $ go run .
-Hello, World!
+Hello COMP423!
 ```
 
 ## Congratulations!
