@@ -71,6 +71,8 @@ Wait for the container to set up (this may take a few minutes).
 
 ## Part 3: Getting Started with Go
 
+>Before creating your first Go program, check to see that your installation was successful with the ```go version``` command.
+
 ### Step 1: Initialize a Go Mod File
 ```
 go mod init hello-comp423
@@ -94,9 +96,16 @@ This is your Go code. In this code, you:
 
 ### Step 3: Run your code in the command line.
 
+There are two options to run your code now that the program is written. First, you can use the ```go run``` command. This command compiles and runs the program in a single step.
 ```
 $ go run .
-Hello, World!
+```
+
+The second option is to use ```go build```. This command compiles the Go program into binary, creating an executable file that can run independently. With that file, you can use the ```./hello``` command to run the executable.
+
+```
+$ go build -o hello
+$ ./hello
 ```
 
 ## Congratulations!
